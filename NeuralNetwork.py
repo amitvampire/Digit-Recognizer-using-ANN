@@ -34,7 +34,7 @@ class SigmoidNeuralNetwork():
         output = [(np.argmax(self.Output(x)), y) for x, y in test_data]
         return (sum((x==y) for x, y in output)/len(test_data))*100.0
     
-    #stochastic gradient descent
+    #mini-batch gradient descent
     def SGD(self,  training_data, epochs, batch_size, eta, test_data = None):
         training_data = list(training_data)
         if test_data:
