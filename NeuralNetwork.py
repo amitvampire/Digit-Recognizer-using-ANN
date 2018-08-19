@@ -35,7 +35,7 @@ class SigmoidNeuralNetwork():
         return (sum((x==y) for x, y in output)/len(test_data))*100.0
     
     #mini-batch gradient descent
-    def SGD(self,  training_data, epochs, batch_size, eta, test_data = None):
+    def MBGD(self,  training_data, epochs, batch_size, eta, test_data = None):
         training_data = list(training_data)
         if test_data:
             test_data = list(test_data)                
